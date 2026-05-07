@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Mario Alencar</title>
+    <style>
+        /* CSS Básico - Sem variáveis, usando cores fixas */
+        body {
+            background-color: #082f49; /* Fundo azul escuro sólido, sem gradiente complexo */
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto; /* Centraliza a div na tela */
+            padding-bottom: 50px;
+        }
+
+        /* Cabeçalho simples com Flexbox básico */
+        header {
+            background-color: #0c4a6e;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #22d3ee;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .logo span {
+            color: #22d3ee;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #22d3ee;
+        }
+
+        /* Seção principal centralizada */
+        .hero {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 36px; /* Tamanho fixo em pixels */
+            color: #22d3ee;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        /* Botão padrão */
+        .btn {
+            background-color: #22d3ee;
+            color: #0f172a;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #06b6d4;
+        }
+
+        /* Títulos das seções */
+        h2 {
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: #22d3ee;
+        }
+
+        /* Cartões de projeto em bloco (um embaixo do outro) */
+        .card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 20px;
+            margin-bottom: 20px; /* Espaço entre os cartões */
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #22d3ee;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        .card-tag {
+            background-color: #0f172a;
+            color: #22d3ee;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Formulário de Contato simples */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #22d3ee;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #334155;
+            border-radius: 5px;
+            background-color: #1e293b;
+            color: white;
+            box-sizing: border-box; /* Garante que o padding não quebre a largura */
+        }
+
+        button.submit-btn {
+            background-color: #22d3ee;
+            color: #0f172a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button.submit-btn:hover {
+            background-color: #06b6d4;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0f172a;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Mario <span>Alencar</span></div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <br>
+        <div>
+            <!-- Uso de Emojis como ícones (comum em iniciantes) -->
+            <a href="https://github.com/marioalencar" target="_blank" style="text-decoration: none; font-size: 20px;">🐙</a>
+            <a href="https://linkedin.com/in/marioalencar" target="_blank" style="text-decoration: none; font-size: 20px;">💼</a>
+            <a href="http://lattes.cnpq.br/seu-id-aqui" target="_blank" style="text-decoration: none; font-size: 20px;">🎓</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Bem-vindo ao meu Portfólio</h1>
+            <p>Formado em Geografia e mestre interdisciplinar, unindo análise estratégica ao desenvolvimento web.</p>
+            <a href="#projetos" class="btn">Projetos</a>
+        </section>
+
+        <!-- Seção Sobre Mim em vez de Modal -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou Mário Alencar, geógrafo e mestre interdisciplinar.</p>
+            <p>Utilizo o meu background analítico para criar soluções digitais que não só funcionam bem, como resolvem problemas reais de utilizadores.</p>
+            <p>O meu foco atual é o desenvolvimento de interfaces fluidas e seguras.</p>
+        </section>
+
+        <!-- Lista de Projetos (Empilhados, sem carrossel) -->
+        <section id="projetos">
+            <h2>Projetos Recentes</h2>
+            
+            <div class="card">
+                <span class="card-tag">EFICIÊNCIA</span>
+                <h3>Controle de Senhas</h3>
+                <p>Interface focada em otimização de atendimento ao público.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-tag">PRODUTIVIDADE</span>
+                <h3>Projeto Ater</h3>
+                <p>Gestão de documentos e anonimização de dados.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-tag">FINANÇAS</span>
+                <h3>Sumarta Mobile</h3>
+                <p>Aplicação de gestão financeira pessoal com interface fluida.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-tag">ANÁLISE</span>
+                <h3>Nebula Analytics</h3>
+                <p>Interface de BI para monitorização de dados estratégicos.</p>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato na própria página, sem modal -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="card">
+                <form action="https://formspree.io/f/seu-id" method="POST">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Mario Alencar</p>
+    </footer>
+
+</body>
+</html>
