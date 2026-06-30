@@ -103,17 +103,15 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-bottom: 2rem;
-            padding: 2rem 0;
             flex-shrink: 0;
         }
 
         h1 {
             text-align: center;
-            font-size: clamp(1.5rem, 4vw, 3rem);
+            font-size: clamp(1.2rem, 4vw, 3rem);
             line-height: 1.2;
-            margin-bottom: 1rem;
-            font-weight: 800;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
             background: linear-gradient(to right, #fff, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -209,7 +207,7 @@
             scrollbar-color: var(--accent) transparent;
         }
 
-        main::-webkit-scrollbar { width: 4px; }
+        main::-webkit-scrollbar { width: 2px; }
         main::-webkit-scrollbar-track { background: transparent; }
         main::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
 
@@ -366,7 +364,8 @@
         }
 
         .btn-fechar:hover {
-            
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.45);
         }
 
         /* --- MOBILE --- */
@@ -401,9 +400,9 @@
 
         /* Desktop grande (a partir de 1024px) */
         @media (min-width: 1024px) {
-            .hero { padding: 6rem 0; }
+            .hero { padding: 1rem 0; }
             .projetos-grid {
                 /* Evita que os cartões fiquem excessivamente largos; fixa o layout em colunas */
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 gap: 2rem;
-            }
+            }}
